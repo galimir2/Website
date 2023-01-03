@@ -1,0 +1,144 @@
+﻿<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly"
+            defer></script>
+    <meta name="description" content="">
+    <title>Real Madrid</title>
+
+
+    <link rel="stylesheet" href="CSS1.css" />
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cover/">
+    <link rel="stylesheet" href="Home.css" />
+    <!--<script src="Home.js"></script>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="Home1.js"></script>
+
+</head>
+
+<body class="text-center text-white bg" style="background-color: #333">
+
+    <!--The navigation bar-->
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column bg-dark">
+        <header class="mb-auto">
+            <div>
+                <nav class="nav nav-masthead justify-content-center float-md-none">
+                    <img src="logo.png" class="logo">
+                    <h4 class="float-md-start mb-0">Real Madrid</h4>
+                    <a class="nav-link"></a>
+                    <a class="nav-link active" aria-current="page" href="Home.html">Home</a>
+                    <a class="nav-link" aria-current="page" href="News.html">News</a>
+                    <a class="nav-link" aria-current="page" href="Players.html">Players</a>
+                    <a class="nav-link" aria-current="page" href="History.html">History</a>
+                    <a class="nav-link" aria-current="page" href="Trophies.html">Trophies</a>
+                    <a class="nav-link" aria-current="page" href="Records.html">Records</a>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <!--The main part of the page-->
+    <main style="padding-bottom:20px">
+        <h1 class="float-md-center mb-0">This is Real Madrid</h1>
+        <div class="left">
+            <p>
+                Real Madrid, this is the best and most successful club in the world.
+                The club has won all the possible competitions several times,<br /> especially the most valued trophy that a club can win, the Champions League.
+                Real Madrid is holding the most titles of the Champions<br /> League edition as they won it 13 times which is almost two times as much as the second team that has won it which is only 7 times.<br />
+            </p>
+        </div>
+
+        <h1 class="float-md-center mb-0" style="padding-bottom: 20px; padding-top: 20px">Real Madrid Stadium Location<br />Santiago Bernabeu</h1>
+        <div id="map">
+        </div>
+    </main>
+
+
+
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides">
+            <div class="numbertext">1 / 4</div>
+            <img src="milano.jpg" style="width:100%">
+            <div class="text" style="color: black">Trophy Lifting 2016 in Milano</div>
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">2 / 4</div>
+            <img src="cardiff.jpg" style="width:100%">
+            <div class="text" style="color: white">Trophy Lifting 2017 in Cardiff</div>
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">3 / 4</div>
+            <img src="kyiv.jpg" style="width:100%">
+            <div class="text" style="color: white;">Trophy Lifting 2018 in Kyiv</div>
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">4 / 4</div>
+            <img src="trophies.jpg" style="width:100%">
+            <div class="text" style="color: white;">Champions League Trophies</div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+    
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+
+    <!--This is the footer-->
+    <div style="bottom: 0;  left: 0; width: 100%; background-color: #333;">
+        <a href="https://www.facebook.com/RealMadrid" target="_blank" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/realmadrid" target="_blank" class="fa fa-twitter"></a>
+        <a href="https://www.instagram.com/realmadrid/" target="_blank" class="fa fa-instagram"></a>
+    </div>
+</body>
+
+</html>

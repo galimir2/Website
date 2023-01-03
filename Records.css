@@ -1,0 +1,27 @@
+﻿
+/*This is the css for the paragraph*/
+.int {
+    font-size: 20px;
+    text-align: center;
+    text-justify: inter-word;
+    overflow: auto;
+    white-space: pre-line;
+    width: 100%;
+    display: table-cell;
+}
+
+/*This is the css for the alignment of the table*/
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+    width: 50%;
+}
+
+/*CSS for the border and the colors of the td and th*/
+table, td, th {
+    border: 2px solid gray;
+    border-collapse: collapse;
+    color: black;
+    background-color: lightgray;
+}
